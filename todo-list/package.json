@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "@playwright/test": "^1.56.0",
-    "@tailwindcss/cli": "^4.1.14",
-    "tailwindcss": "^4.1.14"
+    "@tailwindcss/cli": "^4.1.14"
   }
 }
