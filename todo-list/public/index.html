@@ -1,60 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Todo List or Bible Vision</title>
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="./logic.js" defer></script>
-</head>
-
-<body class="min-h-screen bg-gradient-to-br from-indigo-100 via-white to-indigo-50 flex flex-col">
-
-  <!-- Header -->
-  <header class="bg-indigo-700 text-white py-4 shadow-md">
-    <div class="container mx-auto px-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold tracking-wide">ToDo List for Simon Zealot</h1>
-      <span class="text-sm italic opacity-90">Organize your walk with purpose</span>
-    </div>
-  </header>
-
-  <!-- Navigation -->
-  <nav class="bg-white shadow-sm border-b border-indigo-100">
-    <div class="container mx-auto px-6 py-3 flex flex-wrap gap-3 justify-center">
-      <button class="text-indigo-700 font-semibold hover:text-indigo-900 transition">Home</button>
-      <button class="text-indigo-700 font-semibold hover:text-indigo-900 transition">ToDo List</button>
-      <button class="text-indigo-700 font-semibold hover:text-indigo-900 transition">Bible Vision</button>
-      <button class="text-indigo-700 font-semibold hover:text-indigo-900 transition">Settings</button>
-    </div>
-  </nav>
-
-  <!-- Main Content -->
-  <main class="flex-grow flex items-center justify-center p-8">
-    <div class="bg-white rounded-2xl shadow-lg p-10 max-w-xl w-full text-center border border-indigo-100">
-      <h2 class="text-3xl font-bold text-indigo-700 mb-6">
-        ToDo List for: <span class="text-gray-800 italic">&lt;disciple-name&gt;</span><br>
-        or Bible Vision for: <span class="text-gray-800 italic">&lt;disciple-name&gt;</span>
-      </h2>
-
-      <div class="flex flex-col gap-4">
-        <button class="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-indigo-700 transition">
-          View ToDo List
-        </button>
-        <button class="bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-emerald-700 transition">
-          View Bible Vision
-        </button>
+  <head>
+    <meta charset="utf-8" />
+    <title>ToDo List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="logic.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
+    <!-- Header -->
+    <header class="flex-none border-b bg-white">
+      <div class="px-4 py-3">
+        <h1 class="text-xl font-semibold">ToDo List</h1>
+        <p class="text-sm text-gray-600">Build your own UI using the JSON API.</p>
       </div>
+    </header>
+    <div class="flex-1 flex overflow-hidden min-h-0">
+      <!-- Left column: fixed width; scrolls independently -->
+      <nav class="w-80 shrink-0 border-r bg-green-100 p-4 overflow-y-auto">
+        <h2 class="text-lg font-medium mb-4">Tasks</h2>
+        <ul id="task-list" class="space-y-2">
+          <!-- Task items will be dynamically inserted here -->
+        </ul>
+        <button id="add-task-button" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+          Add Task
+        </button>
+      </nav>
+      <main class="bg-orange-100 w-full min-h-20"></main>
     </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-indigo-700 text-white py-3 text-center text-sm">
-    <p>&copy; 2025 Disciple Dashboard. All rights reserved.</p>
-  </footer>
-
-</body>
-
+  </body>
 </html>

@@ -16,8 +16,8 @@ const MIME = {
   ".ico": "image/x-icon",
 };
 
-// Only serve these four files
-const ALLOWED = new Set(["/favicon.ico", "/index.html", "/output.css", "/logic.js"]);
+// Only serve these files
+const ALLOWED = new Set(["/favicon.ico", "/index.html", "/output.css", "/style.css", "/logic.js"]);
 
 function sendFile(res, filepath) {
   const ext = path.extname(filepath).toLowerCase();
