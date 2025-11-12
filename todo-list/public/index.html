@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="/style.css" />
-    <script src="logic.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
-    <!-- Header -->
+
     <header class="flex-none border-b bg-white">
       <div class="px-4 py-3">
         <h1 class="text-xl font-semibold">ToDo List</h1>
@@ -18,17 +17,43 @@
       </div>
     </header>
     <div class="flex-1 flex overflow-hidden min-h-0">
-      <!-- Left column: fixed width; scrolls independently -->
-      <nav class="w-80 shrink-0 border-r bg-green-100 p-4 overflow-y-auto">
-        <h2 class="text-lg font-medium mb-4">Tasks</h2>
-        <ul id="task-list" class="space-y-2">
-          <!-- Task items will be dynamically inserted here -->
-        </ul>
-        <button id="add-task-button" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-          Add Task
-        </button>
+
+      <nav id="app" class="w-80 shrink-0 border-r bg-green-100 p-4 overflow-y-auto">
+        <h2 class="text-lg font-medium mb-4">Controls</h2>
+        
+
+        <div class="mb-4 p-2 bg-white rounded text-sm">
+          Total: <span id="stat-total">0</span> | 
+          Open: <span id="stat-open">0</span> | 
+          Done: <span id="stat-done">0</span>
+        </div>
+
+        <div class="flex flex-col gap-2 mb-4">
+          <button class="filter-btn active px-2 py-1 text-sm bg-blue-500 text-white rounded" data-filter="all">All</button>
+          <button class="filter-btn px-2 py-1 text-sm bg-gray-300 rounded" data-filter="open">Open</button>
+          <button class="filter-btn px-2 py-1 text-sm bg-gray-300 rounded" data-filter="done">Done</button>
+          <button id="clear-btn" class="px-2 py-1 text-sm bg-red-500 text-white rounded">Clear Completed</button>
+        </div>
+
+        <div class="mb-4">
+          <input type="text" id="search-input" placeholder="Search..." class="w-full px-2 py-1 text-sm border rounded" />
+        </div>
+
+        <div id="error-box" class="mb-4 p-2 bg-red-200 text-red-800 rounded text-sm" style="display: none;"></div>
+        <div class="mt-4 flex flex-col gap-2">
+          <input type="text" id="add-input" placeholder="New task..." class="w-full px-2 py-1 text-sm border rounded" />
+          <button id="add-submit" class="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 text-sm">Add Task</button>
+        </div>
       </nav>
-      <main class="bg-orange-100 w-full min-h-20"></main>
+      
+      <main class="bg-orange-100 w-full min-h-20 p-4 overflow-y-auto">
+        <h2 class="text-lg font-medium mb-4">Tasks</h2>
+        <ul id="todo-list" class="space-y-2">
+
+        </ul>
+      </main>
     </div>
+
+    <script src="logic.js"></script>
   </body>
 </html>
