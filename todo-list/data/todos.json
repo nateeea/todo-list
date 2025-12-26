@@ -1,15 +1,4 @@
 {
-  "todos": [
-    {
-      "id": 18,
-      "text": "im working late",
-      "done": false
-    },
-    {
-      "id": 19,
-      "text": "cause i'm a",
-      "done": false
-    }
-  ],
+  "todos": [],
   "nextId": 20
 }
