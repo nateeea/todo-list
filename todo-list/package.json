@@ -6,12 +6,16 @@
   "scripts": {
     "test": "playwright test",
     "start": "node server.js",
-    "tailwind": "tailwindcss -i ./tailwind/input.css -o ./public/output.css --watch"
+    "tailwind": "tailwindcss -i ./tailwind/input.css -o ./public/output.css --watch",
+    "build": "esbuild ./src/index.js --bundle --outfile=./public/bundle.js --minify",
+    "dev": "concurrently \"npm run tailwind\" \"npm start\" \"npm build --watch\""
   },
   "author": "Nathan Brubaker",
   "license": "ISC",
   "dependencies": {
     "@playwright/test": "^1.56.0",
-    "@tailwindcss/cli": "^4.1.14"
+    "@tailwindcss/cli": "^4.1.14",
+    "concurrently": "^9.2.1",
+    "esbuild": "^0.27.0"
   }
 }

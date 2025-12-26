@@ -1,25 +1,15 @@
 {
   "todos": [
     {
-      "id": 13,
-      "text": "Buy bread",
+      "id": 18,
+      "text": "im working late",
       "done": false
     },
     {
-      "id": 14,
-      "text": "go to store",
-      "done": true
-    },
-    {
-      "id": 15,
-      "text": "Plant a tree",
-      "done": false
-    },
-    {
-      "id": 16,
-      "text": "Complete interview",
+      "id": 19,
+      "text": "cause i'm a",
       "done": false
     }
   ],
-  "nextId": 17
+  "nextId": 20
 }
