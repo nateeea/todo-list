@@ -4,13 +4,13 @@ A full-stack todo list application with a Node.js backend API and a vanilla Java
 
 ## Features
 
-- ✅ Create, read, update, and delete todos
-- 🔍 Filter todos by status (open/done)
-- 🔎 Search todos by text
-- 💾 Persistent storage using JSON file
-- 🎨 Responsive UI with Tailwind CSS
-- 🧪 Automated testing with Playwright
-- 📊 Real-time statistics (total, open, done items)
+- Create, read, update, and delete todos
+- Filter todos by status (open/done)
+- Search todos by text
+- Persistent storage using JSON file
+- Responsive UI with Tailwind CSS
+- Automated testing with Playwright
+- Real-time statistics (total, open, done items)
 
 ## Prerequisites
 
